@@ -1,0 +1,18 @@
+#table-position {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+#button-position {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.row {
+    height: 54px;
+}
+
+.tab-content {
+    border-width: 0px;
+}

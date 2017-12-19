@@ -1,0 +1,385 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: liaox
+  Date: 2017/12/19
+  Time: 10:11
+  To change this template use File | Settings | File Templates.
+--%>
+<%--<%@ page contentType="text/html;charset=UTF-8" language="java" %>--%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%--<html>--%>
+<%--<head>--%>
+<%--</head>--%>
+<%--<body>--%>
+<%--<div style=" padding-bottom: 10px;">--%>
+<%--&lt;%&ndash;功能按钮&ndash;%&gt;--%>
+<%--<button class="btn btn-xs">--%>
+<%--<i class="icon-bolt bigger-110"></i>--%>
+<%--新建项目--%>
+<%--</button>--%>
+<%--</div>--%>
+<%--this is appData--%>
+<div class="table-responsive" id="appData">
+  <div id="sample-table-2_wrapper" class="dataTables_wrapper appData" role="grid">
+    <div class="row">
+      <div class="table-responsive">
+        <table id="sample-table-2" class="table table-striped table-bordered table-hover">
+          <thead>
+          <tr>
+            <th class="center">
+              <label>
+                <input type="checkbox" class="ace"/>
+                <span class="lbl"></span>
+              </label>
+            </th>
+            <th>序号</th>
+            <th>项目名</th>
+            <th>时间</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody role="alert" aria-live="polite" aria-relevant="all">
+          <tr>
+            <td class="center">
+              <label>
+                <input type="checkbox" class="ace"/>
+                <span class="lbl"></span>
+              </label>
+            </td>
+            <td>1</td>
+            <td>DMAIC中的思维导图</td>
+            <td>Feb 12</td>
+            <td>
+              <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+                <a class="blue" href="#">
+                  <i class="icon-zoom-in bigger-130"></i>
+                </a>
+                <a class="red" href="#">
+                  <i class="icon-trash bigger-130"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="center">
+              <label>
+                <input type="checkbox" class="ace"/>
+                <span class="lbl"></span>
+              </label>
+            </td>
+            <td>1</td>
+            <td>DMAIC中的直方图</td>
+            <td>Feb 12</td>
+            <td>
+              <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+                <a class="blue" href="#">
+                  <i class="icon-zoom-in bigger-130"></i>
+                </a>
+                <a class="red" href="#">
+                  <i class="icon-trash bigger-130"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="center">
+              <label>
+                <input type="checkbox" class="ace"/>
+                <span class="lbl"></span>
+              </label>
+            </td>
+            <td>2</td>
+            <td>DMAIC中的柏拉图</td>
+            <td>Feb 12</td>
+            <td>
+              <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+                <a class="blue" href="#">
+                  <i class="icon-zoom-in bigger-130"></i>
+                </a>
+                <a class="red" href="#">
+                  <i class="icon-trash bigger-130"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="center">
+              <label>
+                <input type="checkbox" class="ace"/>
+                <span class="lbl"></span>
+              </label>
+            </td>
+            <td>2</td>
+            <td>DMAIC中的柏拉图</td>
+            <td>Feb 12</td>
+            <td>
+              <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+                <a class="blue" href="#">
+                  <i class="icon-zoom-in bigger-130"></i>
+                </a>
+                <a class="red" href="#">
+                  <i class="icon-trash bigger-130"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="center">
+              <label>
+                <input type="checkbox" class="ace"/>
+                <span class="lbl"></span>
+              </label>
+            </td>
+            <td>2</td>
+            <td>DMAIC中的柏拉图</td>
+            <td>Feb 12</td>
+            <td>
+              <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+                <a class="blue" href="#">
+                  <i class="icon-zoom-in bigger-130"></i>
+                </a>
+                <a class="red" href="#">
+                  <i class="icon-trash bigger-130"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="center">
+              <label>
+                <input type="checkbox" class="ace"/>
+                <span class="lbl"></span>
+              </label>
+            </td>
+            <td>2</td>
+            <td>DMAIC中的柏拉图</td>
+            <td>Feb 12</td>
+            <td>
+              <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+                <a class="blue" href="#">
+                  <i class="icon-zoom-in bigger-130"></i>
+                </a>
+                <a class="red" href="#">
+                  <i class="icon-trash bigger-130"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="center">
+              <label>
+                <input type="checkbox" class="ace"/>
+                <span class="lbl"></span>
+              </label>
+            </td>
+            <td>2</td>
+            <td>DMAIC中的柏拉图</td>
+            <td>Feb 12</td>
+            <td>
+              <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+                <a class="blue" href="#">
+                  <i class="icon-zoom-in bigger-130"></i>
+                </a>
+                <a class="red" href="#">
+                  <i class="icon-trash bigger-130"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="center">
+              <label>
+                <input type="checkbox" class="ace"/>
+                <span class="lbl"></span>
+              </label>
+            </td>
+            <td>2</td>
+            <td>DMAIC中的柏拉图</td>
+            <td>Feb 12</td>
+            <td>
+              <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+                <a class="blue" href="#">
+                  <i class="icon-zoom-in bigger-130"></i>
+                </a>
+                <a class="red" href="#">
+                  <i class="icon-trash bigger-130"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="center">
+              <label>
+                <input type="checkbox" class="ace"/>
+                <span class="lbl"></span>
+              </label>
+            </td>
+            <td>2</td>
+            <td>DMAIC中的柏拉图</td>
+            <td>Feb 12</td>
+            <td>
+              <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+                <a class="blue" href="#">
+                  <i class="icon-zoom-in bigger-130"></i>
+                </a>
+                <a class="red" href="#">
+                  <i class="icon-trash bigger-130"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="center">
+              <label>
+                <input type="checkbox" class="ace"/>
+                <span class="lbl"></span>
+              </label>
+            </td>
+            <td>2</td>
+            <td>DMAIC中的柏拉图</td>
+            <td>Feb 12</td>
+            <td>
+              <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+                <a class="blue" href="#">
+                  <i class="icon-zoom-in bigger-130"></i>
+                </a>
+                <a class="red" href="#">
+                  <i class="icon-trash bigger-130"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="center">
+              <label>
+                <input type="checkbox" class="ace"/>
+                <span class="lbl"></span>
+              </label>
+            </td>
+            <td>2</td>
+            <td>DMAIC中的柏拉图</td>
+            <td>Feb 12</td>
+            <td>
+              <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+                <a class="blue" href="#">
+                  <i class="icon-zoom-in bigger-130"></i>
+                </a>
+                <a class="red" href="#">
+                  <i class="icon-trash bigger-130"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="center">
+              <label>
+                <input type="checkbox" class="ace"/>
+                <span class="lbl"></span>
+              </label>
+            </td>
+            <td>2</td>
+            <td>DMAIC中的柏拉图</td>
+            <td>Feb 12</td>
+            <td>
+              <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+                <a class="blue" href="#">
+                  <i class="icon-zoom-in bigger-130"></i>
+                </a>
+                <a class="red" href="#">
+                  <i class="icon-trash bigger-130"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="center">
+              <label>
+                <input type="checkbox" class="ace"/>
+                <span class="lbl"></span>
+              </label>
+            </td>
+            <td>2</td>
+            <td>DMAIC中的柏拉图</td>
+            <td>Feb 12</td>
+            <td>
+              <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+                <a class="blue" href="#">
+                  <i class="icon-zoom-in bigger-130"></i>
+                </a>
+                <a class="red" href="#">
+                  <i class="icon-trash bigger-130"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="center">
+              <label>
+                <input type="checkbox" class="ace"/>
+                <span class="lbl"></span>
+              </label>
+            </td>
+            <td>2</td>
+            <td>DMAIC中的柏拉图</td>
+            <td>Feb 12</td>
+            <td>
+              <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+                <a class="blue" href="#">
+                  <i class="icon-zoom-in bigger-130"></i>
+                </a>
+                <a class="red" href="#">
+                  <i class="icon-trash bigger-130"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="center">
+              <label>
+                <input type="checkbox" class="ace"/>
+                <span class="lbl"></span>
+              </label>
+            </td>
+            <td>2</td>
+            <td>DMAIC中的柏拉图</td>
+            <td>Feb 12</td>
+            <td>
+              <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+                <a class="blue" href="#">
+                  <i class="icon-zoom-in bigger-130"></i>
+                </a>
+                <a class="red" href="#">
+                  <i class="icon-trash bigger-130"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="center">
+              <label>
+                <input type="checkbox" class="ace"/>
+                <span class="lbl"></span>
+              </label>
+            </td>
+            <td>2</td>
+            <td>DMAIC中的柏拉图</td>
+            <td>Feb 12</td>
+            <td>
+              <div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
+                <a class="blue" href="#">
+                  <i class="icon-zoom-in bigger-130"></i>
+                </a>
+                <a class="red" href="#">
+                  <i class="icon-trash bigger-130"></i>
+                </a>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<%--</body>--%>
+<%--</html>--%>
