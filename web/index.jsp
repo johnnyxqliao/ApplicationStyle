@@ -14,11 +14,12 @@
   <script src="assets/js/ace-extra.min.js" type="text/javascript"></script>
   <script src="assets/js/jquery-2.0.3.min.js" type="text/javascript"></script>
   <script src="assets/js/ace.min.js" type="text/javascript"></script>
-  <script src="assets/js/bootstrap.js" type="text/javascript"></script>
-  <script src="assets/js/jquery.dataTables.min.js" type="text/javascript"></script>
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js" type="text/javascript"></script>
   <script src="assets/js/jquery.dataTables.bootstrap.js" type="text/javascript"></script>
   <%--需要单独添加的js、css--%>
   <script src="tableStyle.js" type="text/javascript"></script>
+  <script src="buttonAction.js" type="text/javascript"></script>
   <link rel="stylesheet" href="css/TablePosition.css"/>
 </head>
 <body>
@@ -36,14 +37,21 @@
     <%@include file="./jsp/sideBar.jspf" %>
     <%--功能显示区--%>
     <div class="main-content">
+      <div class="breadcrumbs" id="breadcrumbs">
+        <ul class="breadcrumb">
+          <li>
+            <i class="icon-home home-icon"></i>
+            <a href="#">Home</a>
+          </li>
+        </ul>
+      </div>
       <div class="tab-content">
         <%--项目管理--%>
         <div id="projectManagement" class="tab-pane">
           <div id="table-position">
             <div id="button-position">
-              <button class="btn btn-success">查看项目</button>
-              <button class="btn btn-success">新建项目</button>
-              <button class="btn btn-success">删除项目</button>
+              <button class="btn btn-success" data-toggle="modal"  id="asd" onclick="addProject()">新建项目</button>
+              <button class="btn btn-success" data-toggle="modal" data-target="#deleteProject">删除项目</button>
             </div>
             <%if (userInfo != null && userInfo.get("permission").equals("user")) {%>
             <%@include file="./jsp/projectDataManagement/appData.jspf" %>
@@ -68,5 +76,6 @@
     </div>
   </div>
 </div>
+<%@include file="./jsp/modalFrame.jspf" %>
 </body>
 </html>
