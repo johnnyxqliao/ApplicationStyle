@@ -1,81 +1,103 @@
-<%@ page import="java.util.Map" %>
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
+<%--<%@ page import="java.util.Map" %>--%>
+<%@ page language="java" contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<%
+  //  服务器路径
+//  String sourcePath = "http://innovation.xjtu.edu.cn/webresources/ace-master/assets";
+  // 本地路径
+  String sourcePath = "assets";
+%>
 <html lang="en">
 <head>
-  <title>模板</title>
-  <%--css--%>
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/css/ace.min.css"/>
-  <link rel="stylesheet" href="assets/css/font-awesome.min.css"/>
-  <link rel="stylesheet" href="assets/css/ace-rtl.min.css"/>
-  <link rel="stylesheet" href="assets/css/ace-skins.min.css"/>
-  <%--js--%>
-  <script src="assets/js/ace-extra.min.js" type="text/javascript"></script>
-  <script src="assets/js/jquery-2.0.3.min.js" type="text/javascript"></script>
-  <script src="assets/js/ace.min.js" type="text/javascript"></script>
-  <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-  <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js" type="text/javascript"></script>
-  <script src="assets/js/jquery.dataTables.bootstrap.js" type="text/javascript"></script>
+  <title>创新方法工作平台</title>
+  <meta name="description" content="overview &amp; stats"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <%--前台样式css（必须）--%>
+  <link rel="stylesheet" href="<%=sourcePath%>/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="<%=sourcePath%>/css/ace.min.css"/>
+  <link rel="stylesheet" href="<%=sourcePath%>/font-awesome/4.5.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="<%=sourcePath%>/css/ace-rtl.min.css"/>
+  <link rel="stylesheet" href="<%=sourcePath%>/css/ace-skins.min.css"/>
+  <link rel="stylesheet" href="<%=sourcePath%>/css/fonts.googleapis.com.css"/>
+  <%--前台样式js（必须）--%>
+  <script type="text/javascript" src="<%=sourcePath%>/js/ace-extra.min.js"></script>
+  <script type="text/javascript" src="<%=sourcePath%>/js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="<%=sourcePath%>/js/ace.min.js"></script>
+  <script type="text/javascript" src="<%=sourcePath%>/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="<%=sourcePath%>/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" src="<%=sourcePath%>/js/jquery.dataTables.bootstrap.min.js"></script>
+  <script type="text/javascript" src="<%=sourcePath%>/js/jquery-ui.custom.min.js"></script>
+  <script type="text/javascript" src="<%=sourcePath%>/js/jquery.ui.touch-punch.min.js"></script>
+  <script type="text/javascript" src="<%=sourcePath%>/js/jquery.easypiechart.min.js"></script>
+  <script type="text/javascript" src="<%=sourcePath%>/js/jquery.sparkline.index.min.js"></script>
+  <script type="text/javascript" src="<%=sourcePath%>/js/jquery.flot.min.js"></script>
+  <script type="text/javascript" src="<%=sourcePath%>/js/jquery.flot.pie.min.js"></script>
+  <script type="text/javascript" src="<%=sourcePath%>/js/jquery.flot.resize.min.js"></script>
+  <script type="text/javascript" src="<%=sourcePath%>/js/ace-elements.min.js"></script>
   <%--需要单独添加的js、css--%>
-  <script src="tableStyle.js" type="text/javascript"></script>
-  <script src="buttonAction.js" type="text/javascript"></script>
-  <link rel="stylesheet" href="css/TablePosition.css"/>
+  <script type="text/javascript" src="./js/buttonAction.js"></script>
+  <script type="text/javascript" src="./js/logout.js"></script>
+  <script type="text/javascript" src="./js/resultReport.js"></script>
+  <link rel="stylesheet" href="css/Extra.css"/>
 </head>
-<body>
-<%--用户权限判断--%>
-<%
-  Map<String, String> userInfo = (Map<String, String>) request.getSession().getAttribute("userInfo");
-  if (userInfo == null) {
-    out.write("<style> #projectManagement,#projectManagementBar,#saveProject{display:none}</style>");
-  }
-%>
-
-<div class="main-container">
-  <div class="main-container-inner">
-    <%--侧边栏--%>
-    <%@include file="./jsp/sideBar.jspf" %>
-    <%--功能显示区--%>
-    <div class="main-content">
-      <div class="breadcrumbs" id="breadcrumbs">
-        <ul class="breadcrumb">
-          <li>
-            <i class="icon-home home-icon"></i>
-            <a href="#">Home</a>
-          </li>
-        </ul>
+<body class="no-skin">
+<%@include file="jsp/jspf/banner.jspf" %>
+<div class="main-container ace-save-state" id="main-container">
+  <%--侧边栏--%>
+  <%@include file="jsp/jspf/sideBar.jspf" %>
+  <%--功能显示区--%>
+  <div class="main-content">
+    <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+      <ul class="breadcrumb">
+        <li>
+          <i class="ace-icon fa fa-home home-icon"></i>
+          <a href="#" style="font-weight: bold">创新方法工具平台</a>
+        </li>
+        <li class="active">此处改为app名字</li>
+      </ul>
+    </div>
+    <div class="tab-content">
+      <%--主功能区--%>
+      <div id="mainFunction" class="tab-pane">
+        <%@include file="/jsp/navigationBar/mainFunction.jspf" %>
       </div>
-      <div class="tab-content">
-        <%--项目管理--%>
-        <div id="projectManagement" class="tab-pane">
-          <div id="table-position">
-            <div id="button-position">
-              <button class="btn btn-success" data-toggle="modal"  id="asd" onclick="addProject()">新建项目</button>
-              <button class="btn btn-success" data-toggle="modal" data-target="#deleteProject">删除项目</button>
-            </div>
-            <%if (userInfo != null && userInfo.get("permission").equals("user")) {%>
-            <%@include file="./jsp/projectDataManagement/appData.jspf" %>
-            <%} else if (userInfo != null && userInfo.get("permission").equals("admin")) {%>
-            <%@include file="./jsp/projectDataManagement/templetData.jspf" %>
-            <%}%>
+      <%--项目管理--%>
+      <%
+        if (userInfo == null) {
+          out.write("<style> " +
+                "#projectManagement,#projectManagementBar,#saveProject" +
+                "{display:none}" +
+                "</style>");
+          out.write("<script>" +
+                "console.log('demo');" +
+                "$('#mainFunction').addClass('active');" +
+                "$('#mainId').addClass('active');" +
+                "</script>");
+        }
+      %>
+      <div id="projectManagement" class="tab-pane active">
+        <div id="table-position">
+          <div class="btn-group btn-group-sm">
+            <button id="buttonNew" class="btn btn-success" data-toggle="modal" data-target="#newProjectModal">
+              <span class="menu-icon fa fa-folder"></span>新建项目
+            </button>
           </div>
+          <%@include file="jsp/jspf/tableData.jspf" %>
         </div>
-        <%--主功能区--%>
-        <div id="mainFunction" class="tab-pane active">
-          <jsp:include page="/jsp/navigationBar/mainFunction.jsp"/>
-        </div>
-        <%--word编辑区--%>
-        <div id="wordEdit" class="tab-pane">
-          <jsp:include page="/jsp/navigationBar/wordEdit.jsp"/>
-        </div>
-        <%--帮助文档--%>
-        <div id="help" class="tab-pane">
-          <jsp:include page="/jsp/navigationBar/help.jsp"/>
-        </div>
+      </div>
+      <%--word编辑区--%>
+      <div id="wordEdit" class="tab-pane">
+        <%@include file="/jsp/navigationBar/wordEdit.jspf" %>
+      </div>
+      <%--帮助文档--%>
+      <div id="help" class="tab-pane">
+        <%@include file="/jsp/navigationBar/help.jspf" %>
       </div>
     </div>
   </div>
+  <%@include file="jsp/jspf/copyright.jspf" %>
 </div>
-<%@include file="./jsp/modalFrame.jspf" %>
+<%@include file="jsp/jspf/modalFrame.jspf" %>
 </body>
 </html>
