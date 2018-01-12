@@ -3,9 +3,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <%
   //  服务器路径
-//  String sourcePath = "http://innovation.xjtu.edu.cn/webresources/ace-master/assets";
+  String sourcePath = "http://innovation.xjtu.edu.cn/webresources/ace-master/assets";
   // 本地路径
-  String sourcePath = "assets";
+//  String sourcePath = "assets";
 %>
 <html lang="en">
 <head>
@@ -66,13 +66,15 @@
       <%
         if (userInfo == null) {
           out.write("<style> " +
-                "#projectManagement,#projectManagementBar,#saveProject" +
+                "#projectManagement,#projectManagementBar,#saveProject,#wordEdit,#wordEditBar,#exportWord,#saveProject" +
                 "{display:none}" +
+                "#mainIdA" +
+                "{pointer-events:auto;}" +
                 "</style>");
           out.write("<script>" +
-                "console.log('demo');" +
                 "$('#mainFunction').addClass('active');" +
                 "$('#mainId').addClass('active');" +
+                "$('#mainIdA').css('pointer-events', 'auto');" +
                 "</script>");
         }
       %>
@@ -99,5 +101,6 @@
   <%@include file="jsp/jspf/copyright.jspf" %>
 </div>
 <%@include file="jsp/jspf/modalFrame.jspf" %>
+
 </body>
 </html>
